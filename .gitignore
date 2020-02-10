@@ -1,0 +1,10 @@
+# VSCode related
+.vscode/
+
+# Python related
+**/__pycache__/
+venv/
+
+# Django related
+/static/
+db.sqlite3

@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="view cover-page"
+    style="background-image: url('https://via.placeholder.com/500'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-4 white-text text-center">
+                    <h1 class="display-4 white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown"
+                        data-wow-delay="0.3s">영상처리 연구실</h1>
+                    <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
+                    <h5 class="text-uppercase mb-4 white-text wow fadeInDown" data-wow-delay="0.4s">
+                        <strong>Soonchunhyang University</strong>
+                    </h5>
+                    <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">문의하기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card card-image"
+    style="background-image: url(https://via.placeholder.com/500); min-height: 45vh; background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <div class="text-white text-center rgba-stylish-strong py-5 px-4">
+        <div class="py-5">
+            <h5 class="h5 light-blue-text">IPLaboratory</h5>
+            <h2 class="card-title h2 my-4 py-2">순천향대학교 영상처리 연구실</h2>
+            <p class="mb-4 pb-2 px-md-5 mx-md-5">
+                <p>4차 산업혁명시대 흐름의 주축이 되는 인공지능 기술에 직관적인 사용자 인터페이스로</p>
+                <p>주목받는 영상처리 및 컴퓨터 비전 분야를 융합한 연구를 활발하게 진행중입니다.</p>
+                <p>Open IPL!</p>
+            </p>
+
+            <div class="container">
+                <div class="row" style="margin: auto; margin-top: 50px; max-width: 1000px;">
+                    <div class="col-lg-4 col-md-4" style="margin: auto; margin-bottom: 50px; max-width: 300px;">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/150" class="card-img-top" alt="">
+                            <div class="card-body card-body-cascade text-center text-body">
+                                <h4 class="card-title"><strong>Artificial Intelligence</strong></h4>
+                                <h5>인공 지능</h5>
+                                <p class="card-text">인공지능 설명 인공지능 설명 인공지능 설명 인공지능 설명 인공지능 설명 인공지능 설명 인공지능 설명 .</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4" style="margin: auto; margin-bottom: 50px; max-width: 500px;">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/150" class="card-img-top" alt="">
+                            <div class="card-body card-body-cascade text-center text-body">
+                                <h4 class="card-title"><strong>Image Processing</strong></h4>
+                                <h5>영상 처리</h5>
+                                <p class="card-text">영상처리 설명 영상처리 설명 영상처리 설명 영상처리 설명 영상처리 설명 영상처리 설명 영상처리 설명 .</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4" style="margin: auto; margin-bottom: 50px; max-width: 500px;">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/150" class="card-img-top" alt="">
+                            <div class="card-body card-body-cascade text-center text-body">
+                                <h4 class="card-title"><strong>Computer Vision</strong></h4>
+                                <h5>컴퓨터 비전</h5>
+                                <p class="card-text">컴퓨터 비전 설명 컴퓨터 비전 설명 컴퓨터 비전 설명 컴퓨터 비전 설명 컴퓨터 비전 설명 컴퓨터 비전 설명 .
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+{% endblock %}

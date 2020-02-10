@@ -1,0 +1,28 @@
+.cover-page {
+    height: 100%;
+}
+
+@media (max-width: 740px) {
+    .cover-page {
+        height: 100vh;
+    }
+}
+
+.top-nav-collapse {
+    background-color: #1d1d1f !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+    background: transparent !important;
+}
+
+@media (max-width: 991px) {
+    .navbar:not(.top-nav-collapse) {
+        background: transparent !important;
+    }
+}
+
+.hr-light {
+    border-top: 3px solid #fff;
+    width: 400px;
+}
