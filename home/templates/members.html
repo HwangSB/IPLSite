@@ -6,19 +6,63 @@
 {% endblock %}
 
 {% block content %}
-<div style="background-color: white;">
-    <div class="container" style="padding-top: 100px;">
+<div class="card card-image"
+    style="background-image: url(https://via.placeholder.com/500); min-height: 30vh; background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <div class="text-white text-center rgba-black-light py-5 px-4" style="min-height: 30vh; position: relative;">
+        <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">
+            <h2 class="card-title h2 my-4 py-2">Members</h2>
+        </div>
+    </div>
+</div>
+
+<div style="background-color: whitesmoke;">
+    <div class="container" style="padding-top: 50px;">
+        <div class="card" style="width: auto; margin: auto; margin-bottom: 50px;">
+            <div class="mx-auto avatar-bg purple-gradient" style="border-top-left-radius: 3px; border-top-right-radius: 3px;">
+                <div class="mx-auto avatar-left white rounded-circle">
+                    <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" style="width: 200px; height: 200px; margin: 5px;">
+                </div>
+            </div>
+            <h5 class="mx-auto avatar-subtitle-left">Professor</h4>
+            <h4 class="mx-auto text-center avatar-title-left display-4">Cheon Inguk</h4>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-4 mt-5">
+                        <h4 class="card-title text-center">교수 소개</h4>
+                        <p class="text-justify">hello world my name is Cheon Inguk hello world my name is Cheon Inguk hello world my name is Cheon Inguk </p>
+                        <p class="text-justify">hello world my name is Cheon Inguk hello world my name is Cheon Inguk hello world my name is Cheon Inguk hello world my name is Cheon Inguk.</p>
+                    </div>
+                    <div class="col-lg-4 mt-5">
+                        <h4 class="card-title text-center">저서</h4>
+                        <ul class="list-group text-center">
+                            <li class="list-group-item">Python</li>
+                            <li class="list-group-item">Python</li>
+                            <li class="list-group-item">Python</li>
+                            <li class="list-group-item">Python</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 mt-5">
+                        <h4 class="card-title text-center">이력</h4>
+                        <ul class="list-group text-center">
+                            <li class="list-group-item">1999~2001 hello world</li>
+                            <li class="list-group-item">1999~2001 hello world</li>
+                            <li class="list-group-item">1999~2001 hello world</li>
+                            <li class="list-group-item">1999~2001 hello world</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <h1 class="display-4" style="text-align: center;">Undergraduate</h1>
         <div class="row mt-5">
             {% for undergraduate in undergraduates %}
             <div class="col-lg-4 col-md-6">
-                <div class="card" style="width: 300px; margin-bottom: 50px;">
+                <div class="card" style="width: 300px; margin: auto; margin-bottom: 50px;">
                     <div style="position: relative;">
-                        <div class="blue-gradient color-block mx-auto" style="width: 100%; height: 150px; border-top-left-radius: 3px; border-top-right-radius: 3px;"></div>
-                        <div style="width: 100%; height: 120px;"></div>
-                        <div class="mx-auto white rounded-circle" style="position: absolute; left: 50%; top: 55%; transform: translate(-50%, -50%); width: 210px; height: 210px;"></div>
-                        <div class="mx-auto white" style="position: absolute; left: 50%; top: 55%; transform: translate(-50%, -50%);">
-                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-circle" style="width: 200px; height: 200px;">
+                        <div class="mx-auto peach-gradient" style="width: 100%; height: 150px; border-top-left-radius: 3px; border-top-right-radius: 3px; margin-bottom: 120px;"></div>
+                        <div class="mx-auto white rounded-circle" style="position: absolute; left: 50%; top: 55%; transform: translate(-50%, -50%);">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-circle" style="width: 200px; height: 200px; margin: 5px;">
                         </div>
                     </div>
                     <div class="card-body">
@@ -35,13 +79,11 @@
         <div class="row mt-5">
             {% for undergraduate in graduates %}
             <div class="col-lg-4 col-md-6">
-                <div class="card" style="width: 300px; margin-bottom: 50px;">
+                <div class="card" style="width: 300px; margin: auto; margin-bottom: 50px;">
                     <div style="position: relative;">
-                        <div class="blue-gradient color-block mx-auto" style="width: 100%; height: 150px; border-top-left-radius: 3px; border-top-right-radius: 3px;"></div>
-                        <div style="width: 100%; height: 120px;"></div>
-                        <div class="mx-auto white rounded-circle" style="position: absolute; left: 50%; top: 55%; transform: translate(-50%, -50%); width: 210px; height: 210px;"></div>
-                        <div class="mx-auto white" style="position: absolute; left: 50%; top: 55%; transform: translate(-50%, -50%);">
-                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-circle" style="width: 200px; height: 200px;">
+                        <div class="mx-auto aqua-gradient" style="width: 100%; height: 150px; border-top-left-radius: 3px; border-top-right-radius: 3px; margin-bottom: 120px;"></div>
+                        <div class="mx-auto white rounded-circle" style="position: absolute; left: 50%; top: 55%; transform: translate(-50%, -50%);">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-circle" style="width: 200px; height: 200px; margin: 5px;">
                         </div>
                     </div>
                     <div class="card-body">

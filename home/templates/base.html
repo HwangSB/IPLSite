@@ -13,7 +13,7 @@
     <title>순천향대학교 영상처리 연구실</title>
 
     <!-- MDB icon -->
-    <link rel="icon" href="{% static 'img/mdb-favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <!-- Google Fonts Roboto -->
@@ -22,15 +22,17 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <!-- Material Design Bootstrap -->
     <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
-
-    <!-- Start your external stylesheet here -->
+    
+    <!-- Start your stylesheet here -->
     {% block css %}
     {% endblock %}
-    <!-- End your external stylesheet here -->
+    <!-- End your stylesheet here -->
+
 </head>
 
 <body aria-busy="true">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+    <!-- Start your project here -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar z-depth-0">
         <div class="container">
             <a class="navbar-brand" href="{% url 'home' %}"><strong>IPLaboratory</strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
@@ -58,7 +60,6 @@
         </div>
     </nav>
 
-    <!-- Start your project here-->
     {% block content %}
     {% endblock %}
 
@@ -105,7 +106,7 @@
             <a href="https://hwangsb.github.io"> ipl.sch.ac.kr</a>
         </div>
     </footer>
-    <!-- End your project here-->
+    <!-- End your project here -->
 
     <!-- jQuery -->
     <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
