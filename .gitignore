@@ -6,5 +6,7 @@
 venv/
 
 # Django related
+.config_secret/
 /static/
+/media/
 db.sqlite3

@@ -11,22 +11,33 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import json
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+ROOT_DIR = os.path.dirname(BASE_DIR)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '$w+7ikl98hha!fn08#)liq%x&=wd0_xlexa&)dmpip+hh8=giy'
+CONFIG_SECRET_DIR = os.path.join(ROOT_DIR, '.config_secret')
+CONFIG_SECRET_COMMON_FILE = os.path.join(CONFIG_SECRET_DIR, 'settings_common.json')
+
+config_secret_common = json.loads(open(CONFIG_SECRET_COMMON_FILE).read())
+SECRET_KEY = config_secret_common['django']['secret_key']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '220.69.208.240']
+# ALLOWED_HOSTS = [
+#     'localhost', 
+#     '.ap-northeast-2.compute.amazonaws.com',
+# ]
 
+CONFIG_SECRET_DEBUG_FILE = os.path.join(CONFIG_SECRET_DIR, 'settings_debug.json')
+CONFIG_SECRET_DEPLOY_FILE = os.path.join(CONFIG_SECRET_DIR, 'settings_deploy.json')
 
 # Application definition
 
@@ -68,7 +79,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'IPLSite.wsgi.application'
+# WSGI_APPLICATION = 'IPLSite.wsgi.application'
 
 
 # Database
@@ -127,3 +138,7 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
