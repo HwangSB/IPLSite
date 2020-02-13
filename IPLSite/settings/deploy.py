@@ -1,14 +1,9 @@
 from .base import *
-import os
 import json
 
 config_secret_deploy = json.loads(open(CONFIG_SECRET_DEPLOY_FILE).read())
 
 WSGI_APPLICATION = 'IPLSite.wsgi.application'
-
-STATIC_URL = '/static/'
-
-STATIC_ROOT = os.path.join(ROOT_DIR, 'static')
 
 DEBUG = False
 

@@ -15,7 +15,7 @@
 </div>
 
 <div style="background-color: whitesmoke;">
-    <div class="container" style="padding-top: 50px;">
+    <div id="professor" class="container" style="padding-top: 50px;">
         <div class="card" style="width: auto; margin: auto; margin-bottom: 50px;">
             <div class="mx-auto avatar-bg purple-gradient" style="border-top-left-radius: 3px; border-top-right-radius: 3px;">
                 <div class="mx-auto avatar-left white rounded-circle">
@@ -50,7 +50,7 @@
             </div>
         </div>
 
-        <h1 class="display-4" style="text-align: center;">Undergraduate</h1>
+        <h1 id="undergraduate" class="display-4" style="text-align: center;">Undergraduate</h1>
         <div class="row mt-5">
             {% for undergraduate in undergraduates %}
             <div class="col-lg-4 col-md-6">
@@ -70,7 +70,7 @@
             {% endfor %}
         </div>
 
-        <h1 class="display-4 mt-5" style="text-align: center;">Graduate</h1>
+        <h1 id="graduate" class="display-4 mt-5" style="text-align: center;">Graduate</h1>
         <div class="row mt-5">
             {% for graduate in graduates %}
             <div class="col-lg-4 col-md-6">
