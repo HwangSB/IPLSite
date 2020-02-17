@@ -10,3 +10,14 @@ class Member(models.Model):
 
     def __str__(self):
         return self.profile_name
+
+
+class Project(models.Model):
+    objects = models.Manager()
+    project_image = models.ImageField(upload_to='project/project_image')
+    title = models.CharField(max_length=32)
+    summary = models.CharField(max_length=128)
+    detail = models.TextField()
+
+    def __str__(self):
+        return self.title

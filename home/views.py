@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.db.models import Q
-from .models import Member
+from .models import Member, Project
+import markdown2
 
 
 def redirect_home(request):
@@ -22,4 +23,11 @@ def members(request):
 
     
 def projects(request):
-    return render(request, 'projects.html')
+    project_details = Project.objects.all()
+    return render(request, 'projects.html', {'projects': project_details})
+
+
+def project_detail(request, project_id):
+    detail = get_object_or_404(Project, pk=project_id)
+    detail_text = markdown2.markdown(detail.detail)
+    return render(request, 'project_detail.html', {'project_detail': detail, 'detail_text': detail_text.strip()})

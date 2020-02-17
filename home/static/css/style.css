@@ -85,6 +85,19 @@
     top: 150px;
 }
 
+.thumbnail {
+    width: auto;
+    height: 300px;
+    display: block;
+    overflow: hidden;
+}
+
+.thumbnail img { 
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+}
+
 @media (min-width: 1200px) {
 }
 
